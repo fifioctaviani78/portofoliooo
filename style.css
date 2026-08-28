@@ -1,63 +1,173 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #fce4ec;
-    color: #333;
+    background-color: #11151c;
+    background-image: 
+        linear-gradient(rgba(90, 160, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(90, 160, 255, 0.03) 1px, transparent 1px);
+    background-size: 20px 20px;
+    color: #f3f4f6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
-    ding: 30px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+}
+
+.status-online {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #64b5f6;
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.dot {
+    height: 8px;
+    width: 8px;
+    background-color: #64b5f6;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #64b5f6;
+}
+
+.subtitle {
+    color: #90a4ae;
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
 }
 
 h1 {
-    text-align: center;n
-    color: #d81b60;
-    background-color: #f8bbd0;
-    padding: 20px;
-    border-radius: 15px;
+    color: #ffffff;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 0 0 15px rgba(100, 181, 246, 0.4);
+    margin: 5px 0 15px 0;
+    line-height: 1.2;
 }
 
-h2 {
-    color: #c2185b;
-    border-bottom: 2px solid #f48fb1;
-    padding-bottom: 8px;
-    margin-top: 30px;
+.intro-text {
+    color: #cfd8dc;
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    padding: 0 10px;
 }
 
-body > p,
-ul,
-img {
-    margin-left: 20px;
+.glow-line {
+    width: 120px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #64b5f6, transparent);
+    margin: 0 auto 25px auto;
+    box-shadow: 0 0 10px #64b5f6;
+    border-radius: 2px;
 }
 
-p {
-    font-size: 17px;
-    line-height: 1.8;
+.menu-title {
+    color: #64b5f6;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
 }
 
-img {
-    display: block;
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 5px solid #f48fb1;
-    margin: 20px auto;
-}
-
-ul {
-    background-color: white;
-    padding: 20px 40px;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-}
-
-li {
-    margin: 10px 0;
-    font-size: 17px;
-}
-
-p:last-child {
-    background-color: #fff;
-    padding: 15px;
-    border-radius: 10px;
-    color: #ad1457;
+.menu-title span {
     font-weight: bold;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.menu-btn {
+    background: rgba(18, 28, 45, 0.6);
+    border: 1px solid #64b5f6;
+    color: #bbdefb;
+    padding: 12px 5px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.menu-btn:hover {
+    background-color: #64b5f6;
+    color: #11151c;
+    box-shadow: 0 0 10px rgba(100, 181, 246, 0.5);
+}
+
+.card {
+    background-color: rgba(16, 22, 35, 0.8);
+    border: 1px solid rgba(100, 181, 246, 0.4);
+    border-radius: 20px;
+    padding: 25px 20px;
+    text-align: left;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.img-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.profile-img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 2px solid #64b5f6;
+    object-fit: cover;
+    box-shadow: 0 0 12px rgba(100, 181, 246, 0.3);
+}
+
+.name {
+    text-align: center;
+    color: #ffffff;
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.role {
+    text-align: center;
+    color: #64b5f6;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.about-box {
+    background: rgba(22, 32, 50, 0.6);
+    border: 1px solid rgba(100, 181, 246, 0.2);
+    border-radius: 12px;
+    padding: 15px;
+}
+
+.about-box h3 {
+    color: #90caf9;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.about-box p {
+    color: #cfd8dc;
+    font-size: 13px;
+    margin: 0;
+    line-height: 1.4;
 }
