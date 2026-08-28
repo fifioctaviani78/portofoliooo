@@ -79,6 +79,13 @@ h1 {
     border: 3px solid #64b5f6; /* Efek bingkai */
     box-shadow: 0 0 20px rgba(100, 181, 246, 0.6); /* Efek glowing melingkar */
 }
+.glow-line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25px auto;
+    width: 100%;
+}
 
 .menu-title {
     color: #64b5f6;
