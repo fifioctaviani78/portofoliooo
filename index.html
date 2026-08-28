@@ -5,11 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio - Fifi Octaviani</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS Tambahan untuk Sistem Tab */
+        .card {
+            display: none; /* Sembunyikan semua konten secara default */
+        }
+        .card.active {
+            display: block; /* Hanya tampilkan yang punya kelas 'active' */
+        }
+    </style>
 </head>
 <body>
 
     <div class="container">
-        <!-- Status Online -->
         <div class="status-online">
             <span class="dot"></span> SYSTEM ONLINE
         </div>
@@ -21,26 +29,22 @@
             Selamat datang di ruang digital pribadi saya. Temukan informasi seputar profil, karya, dan media sosial saya di sini.
         </p>
 
-        <!-- Garis Glow -->
         <div class="glow-line"></div>
 
-        <!-- Bagian Menu Sesuai Permintaan -->
         <div class="menu-title">
             <span>&lt;/&gt;</span> JELAJAHI PROFIL
         </div>
 
         <div class="menu-grid">
-            <a href="#profil" class="menu-btn">Profil</a>
-            <a href="#sertifikat" class="menu-btn">Sertifikat</a>
-            <a href="#motivasi" class="menu-btn">Motivasi</a>
-            <a href="#hoby" class="menu-btn">Hobi</a>
-            <a href="#media" class="menu-btn">Media Sosial</a>
+            <button class="menu-btn" onclick="showSection('profil', event)">Profil</button>
+            <button class="menu-btn" onclick="showSection('sertifikat', event)">Sertifikat</button>
+            <button class="menu-btn" onclick="showSection('motivasi', event)">Motivasi</button>
+            <button class="menu-btn" onclick="showSection('hoby', event)">Hobi</button>
+            <button class="menu-btn" onclick="showSection('media', event)">Media Sosial</button>
         </div>
 
-        <!-- Kartu Utama: Profil -->
-        <div id="profil" class="card">
+        <div id="profil" class="card active">
             <div class="img-container">
-                <!-- Ganti 'foto-fifi.jpg' dengan nama file foto Fifi di GitHub -->
                 <img src="foto-fifi.jpg" alt="Fifi Octaviani" class="profile-img">
             </div>
             
@@ -53,7 +57,6 @@
             </div>
         </div>
 
-        <!-- Kotak Sertifikat -->
         <div id="sertifikat" class="card" style="margin-top: 15px;">
             <div class="about-box">
                 <h3>SERTIFIKAT</h3>
@@ -61,7 +64,6 @@
             </div>
         </div>
 
-        <!-- Kotak Motivasi -->
         <div id="motivasi" class="card" style="margin-top: 15px;">
             <div class="about-box">
                 <h3>MOTIVASI</h3>
@@ -69,7 +71,6 @@
             </div>
         </div>
 
-        <!-- Kotak Hobi -->
         <div id="hoby" class="card" style="margin-top: 15px;">
             <div class="about-box">
                 <h3>HOBI</h3>
@@ -77,7 +78,6 @@
             </div>
         </div>
 
-        <!-- Kotak Link Media Sosial -->
         <div id="media" class="card" style="margin-top: 15px; margin-bottom: 30px;">
             <div class="about-box">
                 <h3>LINK MEDIA SOSIAL</h3>
@@ -91,5 +91,18 @@
 
     </div>
 
+    <script>
+        function showSection(sectionId, event) {
+            // Sembunyikan semua kartu
+            const cards = document.querySelectorAll('.card');
+            cards.forEach(card => card.classList.remove('active'));
+
+            // Tampilkan kartu yang diklik
+            const targetCard = document.getElementById(sectionId);
+            if (targetCard) {
+                targetCard.classList.add('active');
+            }
+        }
+    </script>
 </body>
 </html>
